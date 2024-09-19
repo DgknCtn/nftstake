@@ -1,0 +1,279 @@
+:root {
+    --primary-color: #1a1a2e;
+    --secondary-color: #16213e;
+    --accent-color: #0f3460;
+    --text-color: #e94560;
+    --light-text: #f1f1f1;
+    --background-color: #0f0f0f;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--light-text);
+    padding-right: 0; /* Popup açıldığında kayma olmaması için */
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--text-color);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.social-links a {
+    color: var(--light-text);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--text-color);
+}
+
+.hero {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--light-text);
+}
+
+.stat-item p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.cta-button {
+    display: block;
+    margin: 0 auto 2rem;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    background-color: var(--text-color);
+    color: var(--primary-color);
+}
+
+.secondary-button {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: var(--light-text);
+    transform: translateY(-2px);
+}
+
+.period {
+    background-color: var(--accent-color);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.period h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.period p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-banner {
+    background-image: url('https://i.hizliresim.com/rb069aw.png');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-align: center;
+    padding: 1rem;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Diğer öğelerin üzerinde görünmesi için */
+}
+
+.popup-content {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 90%;
+    width: 300px;
+}
+
+/* Popup açıkken scrollbar'ın kaybolmasını önlemek için */
+body.popup-open {
+    overflow: hidden;
+}
+
+.wallet-option {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.wallet-option:hover {
+    background-color: var(--text-color);
+}
+
+#close-popup {
+    margin-top: 1.5rem;
+    background-color: var(--text-color);
+    color: var(--primary-color);
+}
+
+#nft-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.nft-item {
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.nft-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.nft-item button {
+    margin-top: 0.5rem;
+}
+
+#staking-info {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANTH NFT Stake</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">VANTH</div>
+        <nav>
+            <a href="#collections">Collections</a>
+            <a href="#roadmap">Roadmap</a>
+        </nav>
+        <div class="header-right">
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
+            </div>
+            <button id="connect-wallet">Cüzdan Bağla</button>
+        </div>
+    </header>
+    <section class="hero">
+        <h1>VANTH NFT Stake</h1>
+        <p>NFT'lerinizi stake edin, VNTH kazanın!</p>
+    </section>
+    <main>
+        <section class="stats">
+            <div class="stat-item">
+                <h3>Toplam Stake Edilen NFT</h3>
+                <p>1,234</p>
+            </div>
+            <div class="stat-item">
+                <h3>Toplam VNTH Havuzu</h3>
+                <p>5,000,000 VNTH</p>
+            </div>
+            <div class="stat-item">
+                <h3>Toplam Kazanılan VNTH</h3>
+                <p>750,000 VNTH</p>
+            </div>
+        </section>
+        <button id="stake-nft" class="cta-button">NFT Stake Et</button>
+        <section class="period">
+            <h2>XXX: Devam Ediyor</h2>
+            <p>Ödül Havuzu: 999,000 $VNTH</p>
+            <p>Kalan Süre: <span id="countdown"></span></p>
+            <button id="withdraw" class="secondary-button">Ödülleri Çek</button>
+        </section>
+    </main>
+    <div class="footer-banner"></div>
+    <footer>
+        <p>&copy; 2024 VANTH NFT.</p>
+    </footer>
+
+    <div id="wallet-popup" class="popup">
+        <div class="popup-content">
+            <h2>Cüzdan Seçin</h2>
+            <button class="wallet-option" data-wallet="nami">Nami</button>
+            <button class="wallet-option" data-wallet="eternl">Eternl</button>
+            <button class="wallet-option" data-wallet="flint">Flint</button>
+            <button class="wallet-option" data-wallet="gero">Gero</button>
+            <button id="close-popup">Kapat</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
